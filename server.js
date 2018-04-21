@@ -62,15 +62,18 @@ app.set("view engine", "handlebars");
 //         // Select each element in the HTML body from which you want information.
 //         // NOTE: Cheerio selectors function similarly to jQuery's selectors,
 //         // but be sure to visit the package's npm page to see how it works
-//         $("article.unit standard-unit a l ea eb ec ed ag ah ee ef eg eh ei ej").each(function(i, element) {
+//         $("a.grid__wrapper__card").each(function(i, element) {
             
-//             var link = $(element).children("a").attr("href");
-//             var title = $(element).children(".fv bt c d fw fx").text();
+//             var link = $(element).attr("href");
+//             var title = $(element).children("div.grid__wrapper__card__text").children().children("h2").text();
+//             var summary = $(element).children("div.grid__wrapper__card__text").children().children("div.grid__wrapper__card__text__summary").text();
+        
         
 //             // Save these results in an object that we'll push into the results array we defined earlier
 //             db.scrapedData.insert(
 //             {
 //             title: title,
+//             summary: summary,
 //             link: link
 //             });
           
