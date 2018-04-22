@@ -5,9 +5,6 @@ var mongojs = require("mongojs");
 var request = require("request");
 var cheerio = require("cheerio");
 
-// route
-var index = require("./routes/index");
-
 // Initialize Express
 var app = express();
 
@@ -22,6 +19,10 @@ app.use(bodyParser.json());
 var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
+
+
+// route
+var index = require("./routes/index");
 
 // routes
 app.use('/', index);
