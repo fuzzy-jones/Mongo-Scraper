@@ -1,1 +1,57 @@
-<h1>Fuzzy Jones</h1>
+{{!-- navbar --}}
+<nav class="navbar navbar-inverse" id="navbar">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Mongo Scraper</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Saved Articles</a></li>
+        </ul>
+        <button class="btn btn-danger navbar-btn" id="scrape-button">Scrape New Articles</button>
+    </div>
+</nav>
+
+{{!-- jumbotron --}}
+<div class="jumbotron">
+    <div class="jumbotron-font">
+        <h1>Mongo Scraper</h1>      
+        <p>Vice News Edition</p>
+    </div>
+</div>
+
+{{!-- article lists --}}
+<section id="news-articles">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                    <ul id="display-articles">
+                        {{!-- dynamically append users books --}}
+                    </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{!-- scrape modal --}}
+<div id="scrape-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Vice Scraper</h4>
+        </div>
+        <div class="modal-body">
+            <p>Articles have been scraped</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+
+    </div>
+</div>
+
+{{!--  --}}
