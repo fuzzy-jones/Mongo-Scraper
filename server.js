@@ -24,10 +24,12 @@ app.set("view engine", "handlebars");
 // route
 var index = require("./routes/index");
 var scrape = require("./routes/scrape");
+var savedarticles = require("./routes/savedarticles");
 
 // routes
 app.use('/', index);
 app.use('/scrape', scrape);
+app.use('/savedarticles', savedarticles);
 
 // // Database configuration
 var databaseUrl = "viceScraper";

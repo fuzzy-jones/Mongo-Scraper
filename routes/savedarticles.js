@@ -3,8 +3,8 @@ var router = express.Router();
 
 /* GET home page. */
 
-router.get('/scrape', function(req, res) {
-    res.render("dashboard/index");
+router.get('/savedarticles', function(req, res) {
+    res.render("dashboard/savedarticles");
 });
 
 module.exports = router;
