@@ -12,7 +12,7 @@ function getAllArticles () {
             );
         }
         $(".save-article-button").on("click", function() {
-            
+
         });
     });
 };
@@ -20,6 +20,7 @@ function getAllArticles () {
 getAllArticles();
 
 $("#scrape-button").on("click", function(event) {
+    getAllArticles();
     $("#scrape-amount").text("You scraped new articles");
     $("#scrape-modal").modal('show');
     location.reload();

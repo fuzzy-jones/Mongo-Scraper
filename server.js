@@ -29,7 +29,7 @@ var savedarticles = require("./routes/savedarticles");
 // routes
 app.use('/', index);
 app.use('/scrape', scrape);
-app.use('/savedarticles', savedarticles);
+app.use('/', savedarticles);
 
 // // Database configuration
 var databaseUrl = "viceScraper";
