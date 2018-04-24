@@ -33,6 +33,10 @@ body {
 }
 
 .save-article-button {
-    /* float: right; */
+    background-color: lightblue;
+    border: 1px solid darkblue;
+    /* display: inline-block;
+    margin: 0 auto;
+    margin-left: 20px; */
 }
 

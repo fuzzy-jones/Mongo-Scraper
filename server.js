@@ -77,7 +77,6 @@ app.get("/scrape", function(req, res) {
             var title = $(element).children("div.grid__wrapper__card__text").children().children("h2").text();
             var summary = $(element).children("div.grid__wrapper__card__text").children().children("div.grid__wrapper__card__text__summary").text();
         
-        
             db.scrapedData.insert({
                 title: title,
                 summary: summary,
@@ -115,18 +114,18 @@ app.get("/scrape", function(req, res) {
 //     $("a.grid__wrapper__card").each(function(i, element) {
 //         // <a class="grid__wrapper__card grd-col col-12-xs col-6-m col-4-xl col-3-hd" href="https://video.vice.com/en_us/video/blazing-trails-in-frisco-colorado-blunt-reviews/5ac7e631f1cdb36f883212e1?ref=vice" target="_blank"><div class="p-b-2-xs dsp-none-xs dsp-block-m grid__wrapper__card__topic"><div class="jsx-4125111214 topic__date"><div class="canonical__topic hed-xs dsp-inline-xs"><span>Blunt Reviews</span></div></div></div><div class="grid__wrapper__card__thumbnail__wrapper"><div class="grid__wrapper__card__thumbnail"><picture><source srcset="https://video-images.vice.com/videos/5a/c7/5ac7e631f1cdb36f883212e1/5ac7e631f1cdb36f883212e1-1524260343756.jpg?crop=1xw%3A1xh%3Bcenter%2Ccenter&amp;resize=1250%3A*" media="(min-width: 1250px)"><source srcset="https://video-images.vice.com/videos/5a/c7/5ac7e631f1cdb36f883212e1/5ac7e631f1cdb36f883212e1-1524260343756.jpg?crop=1xw%3A1xh%3Bcenter%2Ccenter&amp;resize=1050%3A*" media="(min-width: 1050px)"><source srcset="https://video-images.vice.com/videos/5a/c7/5ac7e631f1cdb36f883212e1/5ac7e631f1cdb36f883212e1-1524260343756.jpg?crop=1xw%3A1xh%3Bcenter%2Ccenter&amp;resize=850%3A*" media="(min-width: 850px)"><source srcset="https://video-images.vice.com/videos/5a/c7/5ac7e631f1cdb36f883212e1/5ac7e631f1cdb36f883212e1-1524260343756.jpg?crop=1xw%3A1xh%3Bcenter%2Ccenter&amp;resize=650%3A*" media="(min-width: 650px)"><source srcset="https://video-images.vice.com/videos/5a/c7/5ac7e631f1cdb36f883212e1/5ac7e631f1cdb36f883212e1-1524260343756.jpg?crop=1xw%3A1xh%3Bcenter%2Ccenter&amp;resize=600%3A*" media="(min-width: 400px)"><source srcset="https://video-images.vice.com/videos/5a/c7/5ac7e631f1cdb36f883212e1/5ac7e631f1cdb36f883212e1-1524260343756.jpg?crop=1xw%3A1xh%3Bcenter%2Ccenter&amp;resize=400%3A*" media="(min-width: 0px)"><img priority="2" class="" src="https://vice-web-statics-cdn.vice.com/images/blank.png"></picture></div><div class="play-duration__wrapper dsp-flex-xs p-t-2-xs p-b-2-xs p-r-2-xs p-l-2-xs"><div class="play-duration__duration m-l-1-xs hed-xs">9:12</div></div></div><div class="grid__wrapper__card__text p-4-xs p-t-3-m p-b-6-m p-r-0-m p-r-5-m p-l-0-m"><div><h2 class="grid__wrapper__card__text__title hed-m m-b-2-xs">Blazing Trails in Frisco, Colorado</h2><div class="grid__wrapper__card__text__summary bod-s m-b-2-xs">Host Simone Sullivan books a curated mountain weed retreat in Frisco, Colorado.</div></div><div class="dsp-inline-xs hed-xxs canonical__date hed-xxs canonical__date--no-divider">6 hours ago</div></div></a>
 
-//     var link = $(element).attr("href");
-//     var title = $(element).children("div.grid__wrapper__card__text").children().children("h2").text();
-//     var summary = $(element).children("div.grid__wrapper__card__text").children().children("div.grid__wrapper__card__text__summary").text();
-//     // var photo = $(element).children("div.grid__wrapper__card__thumbnail__wrapper").children("div.grid__wrapper__card__thumbnail").children("picture").children("img").attr("src");
+//         var link = $(element).attr("href");
+//         var title = $(element).children("div.grid__wrapper__card__text").children().children("h2").text();
+//         var summary = $(element).children("div.grid__wrapper__card__text").children().children("div.grid__wrapper__card__text__summary").text();
+//         var photo = $(element).children("div.grid__wrapper__card__thumbnail__wrapper").children("div.grid__wrapper__card__thumbnail").children().children("img").attr("src");
 
-//     // Save these results in an object that we'll push into the results array we defined earlier
-//     results.push({
-//         title: title,
-//         summary: summary,
-//         link: link
-//         // photo: photo
-//     });
+//         // Save these results in an object that we'll push into the results array we defined earlier
+//         results.push({
+//             title: title,
+//             summary: summary,
+//             link: link,
+//             photo: photo
+//         });
 //     });
 
 //     // Log the results once you've looped through each of the elements found with cheerio
