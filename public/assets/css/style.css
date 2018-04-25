@@ -9,7 +9,7 @@ body {
 .jumbotron {
     /* color: white; */
     text-align: center;
-    background-image: url("../images/newsjumbo.jpg");
+    background-image: url("../images/worldnews.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 250px;
@@ -17,7 +17,7 @@ body {
 
 .jumbotron-font {
     color: white;
-    padding-top: 20px;
+    padding-top: 25px;
     text-shadow: 0px 15px 5px rgba(0,0,0,0.1),
     10px 20px 5px rgba(0,0,0,0.05),
     -10px 20px 5px rgba(0,0,0,0.05);
@@ -34,7 +34,7 @@ body {
 }
 
 .save-article-button {
-    background-color: lightblue;
+    background-color: lightgreen;
     border: 1px solid darkblue;
     /* display: inline-block;
     margin: 0 auto;
