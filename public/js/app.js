@@ -16,7 +16,7 @@ $(function() {
             console.log("i was clicked");
             
             // event.preventDefault();
-            // var thisId = $(this).data("articleid");
+            // var thisId = $(this);
             // console.log(thisID);
         });
     });
@@ -24,8 +24,8 @@ $(function() {
 
     $(".navbar-btn").on("click", function(event) {
         location.reload();
-        $("#scrape-amount").text("You scraped new articles");
-        $("#scrape-modal").modal('show');
+        // $("#scrape-amount").text("You scraped new articles");
+        // $("#scrape-modal").modal('show');
     });
 
 });
