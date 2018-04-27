@@ -1,5 +1,5 @@
-$(function() {  
-   
+$(document).ready(function(){   
+
     $.getJSON("/articles", function(data) {
         console.log(data);
         // For each one
@@ -23,10 +23,21 @@ $(function() {
     
 
     $(".navbar-btn").on("click", function(event) {
-        location.reload();
         // $("#scrape-amount").text("You scraped new articles");
-        // $("#scrape-modal").modal('show');
+        $("#scrape-modal").modal('show');
     });
+
+    // $("#scrape-articles").on("click", function(event) {
+    //     $.ajax({
+    //         method: "GET",
+    //         url: "/scrape",
+    //     }).done(function(data) {
+    //         console.log(data)
+    //         $("#scrape-modal").modal();
+    //         window.location = "/"
+    //     })
+    // });
+
 
 });
 
