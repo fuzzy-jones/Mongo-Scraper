@@ -33,7 +33,7 @@ body {
     border-top: 1px solid black;
 }
 
-.save-article-button {
+.save-article-button, .unsave-article-button {
     background-color: lightgreen;
     border: 1px solid darkblue;
     /* display: inline-block;

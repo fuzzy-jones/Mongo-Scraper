@@ -55,6 +55,23 @@ app.get("/articles", function(req, res) {
     });
 });
 
+// get saved news articles
+app.get("/S-articles", function(req, res) {
+    // Query: In our database, go to the scraper collection, then "find" everything
+    db.scrapedData.find({"saved": true}, function(err, data) {
+        // Log any errors if the server encounters one
+        if (err) {
+        console.log(err);
+        }
+        else {
+        // Otherwise, send the result of this query to the browser
+        res.json(data);
+        }
+    });
+});
+
+
+
 // scrape vice news site 
 /* -/-/-/-/-/-/-/-/-/-/-/-/- */
 app.get("/scrape", function(req, res) {
@@ -74,11 +91,13 @@ app.get("/scrape", function(req, res) {
             var link = $(element).attr("href");
             var title = $(element).children("div.grid__wrapper__card__text").children().children("h2").text();
             var summary = $(element).children("div.grid__wrapper__card__text").children().children("div.grid__wrapper__card__text__summary").text();
+            var saved = false;
         
             db.scrapedData.insert({
                 title: title,
                 summary: summary,
-                link: link
+                link: link,
+                saved
             },
             function(err, inserted) {
                 if (err) {

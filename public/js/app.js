@@ -15,17 +15,38 @@ $(document).ready(function(){
         $(".save-article-button").on("click", function(event) {
             console.log("i was clicked");
             
-            // event.preventDefault();
-            // var thisId = $(this);
-            // console.log(thisID);
+            event.preventDefault();
+            var ID = $(this).data("articleid");
+            console.log(ID);
         });
+    });
+
+    $.getJSON("/S-articles", function(data) {
+        console.log(data);
+        // For each one
+        for (var i = 0; i < data.length; i++) {
+            // Display the apropos information on the page
+            $("#display-saved-articles").append("<li class='article-list'>" + 
+                "<h3>" + data[i].title + "</h3>" +
+                "<p>" + data[i].summary + "</p>" +
+                "<button class='unsave-article-button' data-articleid=" + data[i]._id + ">Remove Saved Article</button>" + 
+                "</li>"
+            );
+        }
+        // $(".save-article-button").on("click", function(event) {
+        //     console.log("i was clicked");
+            
+        //     event.preventDefault();
+        //     var ID = $(this).data("articleid");
+        //     console.log(ID);
+        // });
     });
     
 
-    $(".navbar-btn").on("click", function(event) {
-        // $("#scrape-amount").text("You scraped new articles");
-        $("#scrape-modal").modal('show');
-    });
+    // $(".navbar-btn").on("click", function(event) {
+    //     // $("#scrape-amount").text("You scraped new articles");
+    //     $("#scrape-modal").modal('show');
+    // });
 
     // $("#scrape-articles").on("click", function(event) {
     //     $.ajax({
